@@ -1,0 +1,19 @@
+<svg width="83" height="82" viewBox="0 0 83 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Social">
+<g id="Background" filter="url(#filter0_d_0_286)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M41.5249 65.535C56.5844 65.535 68.7924 53.3269 68.7924 38.2675C68.7924 23.2081 56.5844 11 41.5249 11C26.4655 11 14.2574 23.2081 14.2574 38.2675C14.2574 53.3269 26.4655 65.535 41.5249 65.535Z" fill="white"/>
+</g>
+<path id="Facebook Icon" fill-rule="evenodd" clip-rule="evenodd" d="M44.9945 35.2686C44.5688 35.1339 44.0792 35.0441 43.6322 35.0441C43.0788 35.0441 41.8867 35.4257 41.8867 36.1665V37.9398H44.7178V40.9252H41.8867V49.1631H39.0344V40.9252H37.6295V37.9398H39.0344V36.4358C39.0344 34.1687 40.0136 32.2832 42.3763 32.2832C43.1852 32.2832 44.6326 32.3281 45.4202 32.6199L44.9945 35.2686Z" fill="#080809"/>
+</g>
+<defs>
+<filter id="filter0_d_0_286" x="0.956231" y="0.359028" width="81.1375" height="81.1376" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2.66024"/>
+<feGaussianBlur stdDeviation="6.65061"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_286"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_286" result="shape"/>
+</filter>
+</defs>
+</svg>
