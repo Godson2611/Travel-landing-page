@@ -17,3 +17,259 @@ body {
   --blue: #4b40c5;
   --orange: #ec682c;
 }
+
+/* ? header-container design starts here  */
+header {
+  background: url(./img/background-img.png) no-repeat 50% center;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0.9;
+  height: 100vh;
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo {
+  margin-top: 48px;
+  margin-left: 50px;
+}
+
+.logo a {
+  color: #000;
+  font-family: Peralta;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.nav-list {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-list ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 50px 54px 0px 0px;
+}
+
+nav ul li a {
+  color: var(--1st, #212832);
+  text-align: center;
+  font-size: 22.612px;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav ul li .btn-orange {
+  border-radius: 8px;
+  border: 1px solid #ec682c;
+  background: #ec682c;
+  height: 40px;
+  padding: 8px 20px;
+  color: #fff;
+  font-size: 22.612px;
+  font-weight: 400;
+}
+
+/* *text box  */
+
+.text-box {
+  text-align: start;
+  margin: 180px 0px 451px 41px;
+}
+
+.text-box > h1 {
+  color: #4b40c5;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 118.381px;
+  letter-spacing: -1.92px;
+}
+
+.text-box > h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text-box > button {
+  border-radius: 13.301px;
+  background: #4b40c5;
+  box-shadow: 0px 26.60243034362793px 46.55425262451172px 0px
+    rgba(241, 165, 1, 0.15);
+  color: #fff1da;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 23.942px;
+  font-weight: 500;
+  border: none;
+  padding: 1rem;
+  margin-top: 26px;
+}
+
+@media screen and (max-width: 1319px) {
+  .nav-list ul li {
+    margin: 50px 30px 0px 0px;
+  }
+  @media screen and (max-width: 1180px) {
+    .nav-list {
+      display: none;
+    }
+  }
+}
+
+/* ? header-container design end here  */
+
+/* todo main-container starts here  */
+/* ? category-container starts here  */
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 4rem auto;
+  z-index: 500;
+}
+
+.category-container > p {
+  color: #4b40c5;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.category-container > h1 {
+  color: var(--3rd, #14183e);
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.category-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 6rem auto;
+}
+
+.content-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  width: 313.15px;
+  height: 393.544px;
+}
+
+.content-card > h2 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+  width: 201px;
+  height: 33px;
+}
+
+.content-card > p {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.583px;
+  width: 212px;
+  height: 136px;
+  margin-top: 16px;
+}
+
+.content-card > img {
+  align-items: center;
+}
+
+.plane {
+  width: 254.334px;
+  height: 191.423px;
+  transform: rotate(-22.33deg);
+}
+
+.radious-card {
+  border-radius: 47.884px;
+  background: var(--white, #fff);
+  box-shadow: 0px 2.4631879329681396px 4.187419891357422px 0px rgba(0, 0, 0, 0),
+    0px 10.838027954101562px 8.67042064666748px 0px rgba(0, 0, 0, 0.01),
+    0px 26.60243034362793px 17.291582107543945px 0px rgba(0, 0, 0, 0.01),
+    0px 51.234317779541016px 33.893463134765625px 0px rgba(0, 0, 0, 0.01),
+    0px 86.2115707397461px 62.318668365478516px 0px rgba(0, 0, 0, 0.02),
+    0px 133.0121612548828px 106.40972137451172px 0px rgba(0, 0, 0, 0.02);
+}
+
+.category-container > .orange-color {
+  border-radius: 39.904px 0px 13.301px 0px;
+  background: #df6951;
+  width: 117.285px;
+  height: 125.333px;
+  z-index: 1000;
+}
+/* ? category-container end here  */
+
+/* ? topSelling-container start here  */
+.topSelling-container {
+  text-align: center;
+}
+.topSelling-container > p {
+  color: #4b40c5;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+.topSelling-container > h1 {
+  color: var(--3rd, #14183e);
+  text-align: center;
+  font-size: 62px;
+  font-weight: 700;
+}
+.row-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.card-colom > .img > img {
+  width: 417.658px;
+  height: 607.866px;
+  margin-top: 40px;
+  border-radius: 31.923px;
+  box-shadow: 0px 2.4631879329681396px 4.187419891357422px 0px rgba(0, 0, 0, 0),
+    0px 10.838027954101562px 8.67042064666748px 0px rgba(0, 0, 0, 0.01),
+    0px 26.60243034362793px 17.291582107543945px 0px rgba(0, 0, 0, 0.01),
+    0px 51.234317779541016px 33.893463134765625px 0px rgba(0, 0, 0, 0.01),
+    0px 86.2115707397461px 62.318668365478516px 0px rgba(0, 0, 0, 0.02),
+    0px 133.0121612548828px 106.40972137451172px 0px rgba(0, 0, 0, 0.02);
+}
+.card-contents {
+  border-radius: 0px 0px 31.923px 31.923px;
+  background: var(--white, #ffffff);
+  width: 418.988px;
+  height: 172.916px;
+  position: relative;
+  bottom: 180px;
+}
+.card-contents > span > p {
+  color: var(--textclr, #5e6282);
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 124.5%;
+}
+
+/* ? topSelling-container end here  */
+/* todo main-container end here  */
