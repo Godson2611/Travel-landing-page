@@ -193,13 +193,60 @@ nav ul li .btn-orange {
 .content-card > img {
   align-items: center;
 }
-
-.plane {
+/* ! see this  */
+/* .plane {
   width: 254.334px;
   height: 191.423px;
   transform: rotate(-22.33deg);
+} */
+/* ! see this  */
+.card-col {
+  position: relative;
 }
-
+.card-col > .boder-orange {
+  position: absolute;
+  top: 313px;
+  left: -50px;
+  z-index: -1;
+  width: 117.285px;
+  height: 125.333px;
+  border-radius: 39.904px 0px 13.301px 0px;
+  background: #df6951;
+}
+.card-col > .boder-blue {
+  position: absolute;
+  top: -30px;
+  left: 225px;
+  z-index: -1;
+  width: 117.285px;
+  height: 125.333px;
+  border-radius: 0px 39.904px 0px 13.301px;
+  background: #4b40c5;
+}
+.radious-card > .back-image {
+  position: relative;
+  top: -15px;
+  left: 20px;
+  width: 58px;
+  height: 60px;
+  background: rgba(240, 187, 31, 0.3);
+}
+.radious-card > .left-img > img {
+  position: absolute;
+  top: -186px;
+  left: -34px;
+}
+.radious-card > .right-img > img {
+  position: absolute;
+  top: 16px;
+  left: -12px;
+}
+.radious-card > .left-img {
+  border-radius: 6.651px 13.301px 6.651px 23.942px;
+}
+.radious-card > .right-img {
+  border-radius: 6.651px 23.942px 6.651px 13.301px;
+}
 .radious-card {
   border-radius: 47.884px;
   background: var(--white, #fff);
@@ -611,7 +658,7 @@ nav ul li .btn-orange {
   width: 1350.493px;
   height: 484.792px;
   border-radius: 171.586px 26.602px 26.602px 26.602px;
-  background-color: #dfd7f9;
+  background-color: #f9f7fe;
 }
 .rectangle-container > h2 {
   width: 991px;
@@ -692,21 +739,7 @@ nav ul li .btn-orange {
   font-size: 18px;
   font-weight: 500;
   line-height: 124.5%;
-}
-.footer-container > table > thead {
-  color: var(--black, #080809);
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 124.5%;
-}
-.footer-container > table > thead > tr {
-  margin-bottom: 34px;
-}
-.footer-container > table > tbody {
-  color: var(--textclr, #5e6282);
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 124.5%;
+  text-align: start;
 }
 .discover-app {
   display: flex;
@@ -758,9 +791,35 @@ nav ul li .btn-orange {
   position: absolute;
   left: 55px;
 }
+.table-content {
+  display: flex;
+  text-align: left;
+}
+.table-content > .company {
+  margin-right: 76.75px;
+  margin-left: 99.74px;
+}
+.table-content > .contact {
+  margin-right: 76.75px;
+}
+.table-content > .more {
+  margin-right: 76.75px;
+}
+.contents > span > h1 {
+  color: var(--black, #080809);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 124.5%;
+}
+.contents > span > p {
+  color: var(--textclr, #5e6282);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 124.5%;
+}
 /* todo footer-container end here  */
 
-/* ! copy rights starts here  */
+/* todo copy rights starts here  */
 .copyRights {
   color: var(--textclr, #5e6282);
   font-size: 18.622px;
@@ -769,4 +828,4 @@ nav ul li .btn-orange {
   text-align: center;
   margin-bottom: 955.69px;
 }
-/* ! copy rights end here  */
+/* todo copy rights end here  */
