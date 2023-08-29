@@ -16,6 +16,22 @@ body {
 :root {
   --blue: #4b40c5;
   --orange: #ec682c;
+  --white: #fff;
+  --black: #000;
+  --radious-card-shadow: 0px 2.4631879329681396px 4.187419891357422px 0px
+      rgba(0, 0, 0, 0),
+    0px 10.838027954101562px 8.67042064666748px 0px rgba(0, 0, 0, 0.01),
+    0px 26.60243034362793px 17.291582107543945px 0px rgba(0, 0, 0, 0.01),
+    0px 51.234317779541016px 33.893463134765625px 0px rgba(0, 0, 0, 0.01),
+    0px 86.2115707397461px 62.318668365478516px 0px rgba(0, 0, 0, 0.02),
+    0px 133.0121612548828px 106.40972137451172px 0px rgba(0, 0, 0, 0.02);
+  --card-colom-shadow: 0px 2.4631879329681396px 4.187419891357422px 0px
+      rgba(0, 0, 0, 0),
+    0px 10.838027954101562px 8.67042064666748px 0px rgba(0, 0, 0, 0.01),
+    0px 26.60243034362793px 17.291582107543945px 0px rgba(0, 0, 0, 0.01),
+    0px 51.234317779541016px 33.893463134765625px 0px rgba(0, 0, 0, 0.01),
+    0px 86.2115707397461px 62.318668365478516px 0px rgba(0, 0, 0, 0.02),
+    0px 133.0121612548828px 106.40972137451172px 0px rgba(0, 0, 0, 0.02);
 }
 
 /* ? header-container design starts here  */
@@ -29,6 +45,7 @@ header {
   opacity: 0.9;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 nav {
@@ -43,7 +60,7 @@ nav {
 }
 
 .logo a {
-  color: #000;
+  color: var(--black);
   font-family: Peralta;
   font-size: 40px;
   font-weight: 400;
@@ -72,11 +89,11 @@ nav ul li a {
 
 nav ul li .btn-orange {
   border-radius: 8px;
-  border: 1px solid #ec682c;
-  background: #ec682c;
+  border: 1px solid var(--orange);
+  background: var(--orange);
   height: 40px;
   padding: 8px 20px;
-  color: #fff;
+  color: var(--white);
   font-size: 22.612px;
   font-weight: 400;
 }
@@ -89,7 +106,7 @@ nav ul li .btn-orange {
 }
 
 .text-box > h1 {
-  color: #4b40c5;
+  color: var(--blue);
   font-size: 48px;
   font-weight: 700;
   line-height: 118.381px;
@@ -97,7 +114,7 @@ nav ul li .btn-orange {
 }
 
 .text-box > h2 {
-  color: #fff;
+  color: var(--white);
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
@@ -118,14 +135,32 @@ nav ul li .btn-orange {
   margin-top: 26px;
 }
 
+/* ! Media Query for screens responsive  */
+
 @media screen and (max-width: 1319px) {
   .nav-list ul li {
     margin: 50px 30px 0px 0px;
   }
-  @media screen and (max-width: 1180px) {
-    .nav-list {
-      display: none;
-    }
+}
+@media screen and (max-width: 1180px) {
+  .nav-list {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .text-box > h1 {
+    font-size: 31px;
+    line-height: 59.381px;
+  }
+  .text-box > button {
+    font-size: 11.942px;
+  }
+  .text-box > h2 {
+    font-size: 20px;
+  }
+  .text-box {
+    text-align: start;
+    margin: 121px 0px 451px 41px;
   }
 }
 
@@ -143,7 +178,7 @@ nav ul li .btn-orange {
 }
 
 .category-container > p {
-  color: #4b40c5;
+  color: var(--blue);
   font-size: 32px;
   font-weight: 700;
 }
@@ -193,13 +228,6 @@ nav ul li .btn-orange {
 .content-card > img {
   align-items: center;
 }
-/* ! see this  */
-/* .plane {
-  width: 254.334px;
-  height: 191.423px;
-  transform: rotate(-22.33deg);
-} */
-/* ! see this  */
 .card-col {
   position: relative;
 }
@@ -211,7 +239,7 @@ nav ul li .btn-orange {
   width: 117.285px;
   height: 125.333px;
   border-radius: 39.904px 0px 13.301px 0px;
-  background: #df6951;
+  background: var(--orange);
 }
 .card-col > .boder-blue {
   position: absolute;
@@ -249,21 +277,29 @@ nav ul li .btn-orange {
 }
 .radious-card {
   border-radius: 47.884px;
-  background: var(--white, #fff);
-  box-shadow: 0px 2.4631879329681396px 4.187419891357422px 0px rgba(0, 0, 0, 0),
-    0px 10.838027954101562px 8.67042064666748px 0px rgba(0, 0, 0, 0.01),
-    0px 26.60243034362793px 17.291582107543945px 0px rgba(0, 0, 0, 0.01),
-    0px 51.234317779541016px 33.893463134765625px 0px rgba(0, 0, 0, 0.01),
-    0px 86.2115707397461px 62.318668365478516px 0px rgba(0, 0, 0, 0.02),
-    0px 133.0121612548828px 106.40972137451172px 0px rgba(0, 0, 0, 0.02);
+  background: var(--white, --white);
+  box-shadow: var(--radious-card-shadow);
 }
 
 .category-container > .orange-color {
   border-radius: 39.904px 0px 13.301px 0px;
-  background: #df6951;
+  background: var(--orange);
   width: 117.285px;
   height: 125.333px;
   z-index: 1000;
+}
+/* ? Media Query for screens responsive  */
+@media screen and (max-width: 480px) {
+  .category-container > p {
+    font-size: 26px;
+  }
+  .category-container > h1 {
+    font-size: 35px;
+  }
+  .category-cards-row {
+    justify-content: center;
+    margin: 4rem;
+  }
 }
 /* ? category-container end here  */
 
@@ -272,7 +308,7 @@ nav ul li .btn-orange {
   text-align: center;
 }
 .topSelling-container > p {
-  color: #4b40c5;
+  color: var(--blue);
   text-align: center;
   font-size: 32px;
   font-weight: 700;
@@ -282,6 +318,7 @@ nav ul li .btn-orange {
   text-align: center;
   font-size: 62px;
   font-weight: 700;
+  margin: 40px auto;
 }
 .row-cards {
   display: flex;
@@ -289,30 +326,33 @@ nav ul li .btn-orange {
   align-items: center;
   justify-content: space-around;
 }
-.card-colom > .img > img {
+.card-colom {
+  position: relative;
   width: 417.658px;
   height: 607.866px;
-  margin-top: 40px;
-  margin-bottom: 0px;
-  border-radius: 31.923px;
-  background-color: lightgray;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-shadow: 0px 2.4631879329681396px 4.187419891357422px 0px rgba(0, 0, 0, 0),
-    0px 10.838027954101562px 8.67042064666748px 0px rgba(0, 0, 0, 0.01),
-    0px 26.60243034362793px 17.291582107543945px 0px rgba(0, 0, 0, 0.01),
-    0px 51.234317779541016px 33.893463134765625px 0px rgba(0, 0, 0, 0.01),
-    0px 86.2115707397461px 62.318668365478516px 0px rgba(0, 0, 0, 0.02),
-    0px 133.0121612548828px 106.40972137451172px 0px rgba(0, 0, 0, 0.02);
+}
+.card-colom > .img > img {
+  position: absolute;
+}
+.card-colom > .img > .rome-img {
+  top: -3px;
+  left: -21px;
+}
+.card-colom > .img > .london-img {
+  top: -3px;
+  left: -106.5px;
+}
+.card-colom > .img > .europe-img {
+  top: -3px;
+  left: -106px;
 }
 .card-contents {
   border-radius: 0px 0px 31.923px 31.923px;
   background: var(--white, #ffffff);
   width: 418.988px;
   height: 172.916px;
-  position: relative;
-  bottom: 180px;
+  position: absolute;
+  bottom: 0px;
 }
 .card-contents > span {
   display: flex;
@@ -342,6 +382,15 @@ nav ul li .btn-orange {
   margin-top: 24.54px;
   margin-left: 26.6px;
   gap: 18.62px;
+}
+/* ? Media Query for screens responsive  */
+@media screen and (max-width: 480px) {
+  .topSelling-container > p {
+    font-size: 26px;
+  }
+  .topSelling-container > h1 {
+    font-size: 35px;
+  }
 }
 /* ? topSelling-container end here  */
 
@@ -402,6 +451,22 @@ nav ul li .btn-orange {
   position: relative;
   top: 236.6px;
   right: 100.7px;
+}
+/* ? Media Query for screens responsive  */
+@media screen and (max-width: 480px) {
+  .left-content > p {
+    margin-top: 100px;
+  }
+  .left-content {
+    margin-left: 34px;
+  }
+  .left-content > h1 {
+    width: 534px;
+    height: 118px;
+    font-size: 40px;
+    margin-left: 45.6px;
+    margin-top: 40px;
+  }
 }
 /* * small card start */
 .big-card {
@@ -556,6 +621,21 @@ nav ul li .btn-orange {
   margin-right: 12px;
 }
 /* * small card end */
+/* ? Media Query for screens responsive  */
+@media screen and (max-width: 480px) {
+  .background-color-blur {
+    top: 132.6px;
+    right: 10.7px;
+  }
+  .big-card {
+    top: -285.4px;
+    right: 8.22px;
+  }
+  .small-card {
+    top: -212px;
+    left: 61px;
+  }
+}
 /* ? easySteps-container end here  */
 
 /* ? choose-container start here  */
@@ -644,10 +724,20 @@ nav ul li .btn-orange {
 .choose-card > .orange-circle {
   background-color: #f15a2b;
 }
+/* ? Media Query for screens responsive  */
+@media screen and (max-width: 480px) {
+  .text-choose > h1 {
+    font-size: 37px;
+  }
+  .text-choose > p {
+    width: 400px;
+    font-size: 18px;
+  }
+}
 /* ? choose-container end here  */
 
 /* ? rectangle-container start here  */
-.rectangle-container {
+.rectangle-content {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -660,7 +750,7 @@ nav ul li .btn-orange {
   border-radius: 171.586px 26.602px 26.602px 26.602px;
   background-color: #f9f7fe;
 }
-.rectangle-container > h2 {
+.rectangle-content > h2 {
   width: 991px;
   height: 161px;
   color: var(--textclr, #5e6282);
@@ -670,16 +760,16 @@ nav ul li .btn-orange {
   margin-left: 194.58px;
   margin-top: 107px;
 }
-.rectangle-container > .email-subscribe {
+.rectangle-content > .email-subscribe {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.rectangle-container > form {
+.rectangle-content > form {
   margin-top: 48.27px;
 }
-.rectangle-container > form > .sub-button {
+.rectangle-content > form > .sub-button {
   width: 207.768px;
   height: 78.49px;
   margin-right: 55.2px;
@@ -693,7 +783,7 @@ nav ul li .btn-orange {
     linear-gradient(180deg, #ff946d 0%, #ff7d68 100%)
   );
 }
-.rectangle-container > form > #email {
+.rectangle-content > form > #email {
   width: 485.947px;
   height: 78.49px;
   margin-right: 27.7px;
@@ -702,26 +792,51 @@ nav ul li .btn-orange {
   background: var(--white, #fff);
   border: none;
 }
-.rectangle-container > .email-subscribe > label {
+.rectangle-content > .email-subscribe > label {
   display: flex;
   align-items: center;
   left: 320px;
   position: absolute;
 }
-.rectangle-container > .email-subscribe > label > p {
+.rectangle-content > .email-subscribe > label > p {
   color: var(--textcolor, #39425d);
   font-family: Montserrat;
   font-size: 18.622px;
   font-weight: 400;
   margin-left: 15.92px;
 }
-.rectangle-container > .email-subscribe {
+.rectangle-content > .email-subscribe {
   position: relative;
 }
-.rectangle-container > img {
+.rectangle-content > img {
   position: absolute;
-  left: 1292px;
+  left: auto;
+  right: -33px;
 }
+/* @media  (min-width: 480px) {
+  .rectangle-content {
+    width: 83%;
+    max-width: 1350.493px;
+  }
+  .rectangle-content > h2 {
+    width: 260px;
+    height: 116px;
+    font-size: 20px;
+    line-height: 32.827px;
+    margin-left: 82.58px;
+  }
+  .rectangle-content > form > #email {
+    margin-right: -6.3px;
+    width: 335.947px;
+  }
+  .rectangle-content > .email-subscribe > label {
+    left: 60px;
+    top: 28px;
+  }
+  .rectangle-content > form > .sub-button {
+    margin-right: 3.2px;
+    margin-top: 19px;
+} */
 /* ? rectangle-container end here  */
 /* todo main-container end here  */
 
@@ -732,7 +847,7 @@ nav ul li .btn-orange {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  margin-bottom: 221.65px;
+  margin-bottom: 113.65px;
 }
 .footer-container > p {
   color: var(--textclr, #5e6282);
