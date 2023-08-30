@@ -11,6 +11,9 @@
 
 body {
   font-family: "poppins", sans-serif;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 :root {
@@ -43,8 +46,6 @@ header {
   flex-direction: column;
   position: relative;
   opacity: 0.9;
-  height: 100vh;
-  width: 100vw;
   overflow: hidden;
 }
 
@@ -56,14 +57,14 @@ nav {
 
 .logo {
   margin-top: 48px;
-  margin-left: 50px;
+  margin-left: 55px;
 }
 
 .logo a {
   color: var(--black);
   font-family: Peralta;
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -75,7 +76,7 @@ nav {
 .nav-list ul li {
   list-style: none;
   display: inline-block;
-  margin: 50px 54px 0px 0px;
+  margin: 50px 54px 0px 13px;
 }
 
 nav ul li a {
@@ -103,6 +104,8 @@ nav ul li .btn-orange {
 .text-box {
   text-align: start;
   margin: 180px 0px 451px 41px;
+  position: relative;
+  top: 125px;
 }
 
 .text-box > h1 {
@@ -133,35 +136,6 @@ nav ul li .btn-orange {
   border: none;
   padding: 1rem;
   margin-top: 26px;
-}
-
-/* ! Media Query for screens responsive  */
-
-@media screen and (max-width: 1319px) {
-  .nav-list ul li {
-    margin: 50px 30px 0px 0px;
-  }
-}
-@media screen and (max-width: 1180px) {
-  .nav-list {
-    display: none;
-  }
-}
-@media screen and (max-width: 480px) {
-  .text-box > h1 {
-    font-size: 31px;
-    line-height: 59.381px;
-  }
-  .text-box > button {
-    font-size: 11.942px;
-  }
-  .text-box > h2 {
-    font-size: 20px;
-  }
-  .text-box {
-    text-align: start;
-    margin: 121px 0px 451px 41px;
-  }
 }
 
 /* ? header-container design end here  */
@@ -288,19 +262,6 @@ nav ul li .btn-orange {
   height: 125.333px;
   z-index: 1000;
 }
-/* ? Media Query for screens responsive  */
-@media screen and (max-width: 480px) {
-  .category-container > p {
-    font-size: 26px;
-  }
-  .category-container > h1 {
-    font-size: 35px;
-  }
-  .category-cards-row {
-    justify-content: center;
-    margin: 4rem;
-  }
-}
 /* ? category-container end here  */
 
 /* ? topSelling-container start here  */
@@ -383,15 +344,6 @@ nav ul li .btn-orange {
   margin-left: 26.6px;
   gap: 18.62px;
 }
-/* ? Media Query for screens responsive  */
-@media screen and (max-width: 480px) {
-  .topSelling-container > p {
-    font-size: 26px;
-  }
-  .topSelling-container > h1 {
-    font-size: 35px;
-  }
-}
 /* ? topSelling-container end here  */
 
 /* ? easySteps-container start here  */
@@ -451,22 +403,6 @@ nav ul li .btn-orange {
   position: relative;
   top: 236.6px;
   right: 100.7px;
-}
-/* ? Media Query for screens responsive  */
-@media screen and (max-width: 480px) {
-  .left-content > p {
-    margin-top: 100px;
-  }
-  .left-content {
-    margin-left: 34px;
-  }
-  .left-content > h1 {
-    width: 534px;
-    height: 118px;
-    font-size: 40px;
-    margin-left: 45.6px;
-    margin-top: 40px;
-  }
 }
 /* * small card start */
 .big-card {
@@ -621,21 +557,6 @@ nav ul li .btn-orange {
   margin-right: 12px;
 }
 /* * small card end */
-/* ? Media Query for screens responsive  */
-@media screen and (max-width: 480px) {
-  .background-color-blur {
-    top: 132.6px;
-    right: 10.7px;
-  }
-  .big-card {
-    top: -285.4px;
-    right: 8.22px;
-  }
-  .small-card {
-    top: -212px;
-    left: 61px;
-  }
-}
 /* ? easySteps-container end here  */
 
 /* ? choose-container start here  */
@@ -724,16 +645,6 @@ nav ul li .btn-orange {
 .choose-card > .orange-circle {
   background-color: #f15a2b;
 }
-/* ? Media Query for screens responsive  */
-@media screen and (max-width: 480px) {
-  .text-choose > h1 {
-    font-size: 37px;
-  }
-  .text-choose > p {
-    width: 400px;
-    font-size: 18px;
-  }
-}
 /* ? choose-container end here  */
 
 /* ? rectangle-container start here  */
@@ -813,30 +724,7 @@ nav ul li .btn-orange {
   left: auto;
   right: -33px;
 }
-/* @media  (min-width: 480px) {
-  .rectangle-content {
-    width: 83%;
-    max-width: 1350.493px;
-  }
-  .rectangle-content > h2 {
-    width: 260px;
-    height: 116px;
-    font-size: 20px;
-    line-height: 32.827px;
-    margin-left: 82.58px;
-  }
-  .rectangle-content > form > #email {
-    margin-right: -6.3px;
-    width: 335.947px;
-  }
-  .rectangle-content > .email-subscribe > label {
-    left: 60px;
-    top: 28px;
-  }
-  .rectangle-content > form > .sub-button {
-    margin-right: 3.2px;
-    margin-top: 19px;
-} */
+
 /* ? rectangle-container end here  */
 /* todo main-container end here  */
 
@@ -909,6 +797,7 @@ nav ul li .btn-orange {
 .table-content {
   display: flex;
   text-align: left;
+  flex-wrap: wrap;
 }
 .table-content > .company {
   margin-right: 76.75px;
@@ -944,3 +833,333 @@ nav ul li .btn-orange {
   margin-bottom: 955.69px;
 }
 /* todo copy rights end here  */
+
+/* ! media query for responsive width in 480px  */
+@media all and (width <= 480px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  .nav-list {
+    display: none;
+  }
+  .text-box {
+    margin: -91px 0px 451px 41px;
+    top: 250px;
+  }
+  .text-box > h1 {
+    font-size: 33px;
+    line-height: 45.381px;
+    margin-bottom: 23px;
+  }
+  .text-box > h2 {
+    font-size: 20px;
+  }
+  .text-box > button {
+    font-size: 13.942px;
+  }
+  .category-container > h1 {
+    font-size: 37px;
+  }
+  .category-container > p {
+    font-size: 25px;
+  }
+  .category-cards-row {
+    justify-content: center;
+  }
+  .topSelling-container > p {
+    font-size: 25px;
+  }
+  .topSelling-container > h1 {
+    font-size: 37px;
+  }
+  .row-cards {
+    gap: 30px;
+  }
+  .left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-content > h1 {
+    font-size: 37px;
+    width: auto;
+    height: auto;
+  }
+  .easySteps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 80px;
+  }
+  .texts {
+    width: 400px;
+    height: 99px;
+  }
+  .background-color-blur {
+    right: -30.3px;
+    top: 200.6px;
+  }
+  .big-card {
+    right: -14.78px;
+    left: 20.4px;
+  }
+  .small-card {
+    top: -81px;
+  }
+  .text-choose > p {
+    width: auto;
+    font-size: 20px;
+  }
+  .rectangle-content {
+    margin: 37px;
+    width: auto;
+    height: 580px;
+  }
+  .rectangle-content > h2 {
+    width: 329px;
+    font-size: 21px;
+    line-height: 39.827px;
+    margin-left: 50.58px;
+  }
+  .rectangle-content > form > #email {
+    width: 342.947px;
+    margin-left: 30px;
+  }
+  .rectangle-content > .email-subscribe > label {
+    left: 60px;
+    top: 27px;
+  }
+  .rectangle-content > form > .sub-button {
+    width: 198.768px;
+    height: 65.49px;
+    margin-top: 40px;
+  }
+  .footer-container {
+    justify-content: center;
+  }
+  .social-icons {
+    margin-right: 20.31px;
+  }
+  .table-content {
+    text-align: left;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .table-content > .company {
+    margin-left: 0px;
+  }
+  .discover-app {
+    align-items: stretch;
+  }
+  .discover-app > h2 {
+    margin-left: 20px;
+  }
+}
+
+/* ! media query for responsive width in 480px to 900px  */
+
+@media (min-width: 480px) and (max-width: 912px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  .nav-list {
+    display: none;
+  }
+  .text-box {
+    margin: 111px 0px 451px 41px;
+    top: 160px;
+  }
+  .text-box > h1 {
+    line-height: 60.381px;
+    font-size: 44px;
+    margin-bottom: 10px;
+  }
+  .text-box > h2 {
+    font-size: 30px;
+  }
+  .text-box > button {
+    font-size: 20px;
+  }
+  .category-container > h1 {
+    font-size: 47px;
+    text-align: center;
+  }
+  .category-container > p {
+    font-size: 30px;
+  }
+  .category-cards-row {
+    justify-content: center;
+  }
+  .topSelling-container > p {
+    font-size: 30px;
+  }
+  .topSelling-container > h1 {
+    font-size: 47px;
+  }
+  .row-cards {
+    gap: 50px;
+  }
+  .left-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    gap: 30px;
+  }
+  .left-content > h1 {
+    width: auto;
+    height: auto;
+    font-size: 55px;
+  }
+  .background-color-blur {
+    top: 164.6px;
+    right: -28.3px;
+  }
+  .big-card {
+    top: -242.4px;
+    right: 23.22px;
+  }
+  .small-card {
+    top: -466px;
+    left: 236px;
+  }
+  .text-choose > p {
+    width: auto;
+    margin-bottom: 43px;
+  }
+  .rectangle-content {
+    margin: 3rem;
+    margin-bottom: 195.28px;
+    width: auto;
+    align-items: center;
+  }
+  .rectangle-content > h2 {
+    width: auto;
+    line-height: 55.827px;
+    margin-left: auto;
+    font-size: 30px;
+    position: absolute;
+    margin-top: 70px;
+    padding: 10px;
+  }
+  .rectangle-content > .email-subscribe {
+    position: relative;
+    top: 235px;
+    gap: 30px;
+  }
+  .rectangle-content > .email-subscribe > label {
+    left: 140px;
+    position: absolute;
+    top: 25px;
+    z-index: 1;
+  }
+  .rectangle-content > form > #email {
+    position: relative;
+  }
+  .footer-container {
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+
+/* ! media query for responsive width in 900px to 1480px  */
+
+@media (min-width: 913px) and (max-width: 1480px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  .rectangle-content {
+    margin: 3rem;
+    margin-bottom: 195.28px;
+    width: auto;
+    align-items: center;
+  }
+  .rectangle-content > h2 {
+    width: auto;
+    line-height: 55.827px;
+    margin-left: auto;
+    font-size: 30px;
+    position: absolute;
+    margin-top: 70px;
+    padding: 3rem;
+  }
+  .rectangle-content > .email-subscribe {
+    position: relative;
+    top: 235px;
+    gap: 30px;
+  }
+  .rectangle-content > .email-subscribe > label {
+    left: 140px;
+    position: absolute;
+    top: 25px;
+    z-index: 1;
+  }
+  .rectangle-content > form > #email {
+    position: relative;
+  }
+  .category-cards-row {
+    justify-content: center;
+  }
+  .row-cards {
+    gap: 50px;
+  }
+}
+
+/* ! media query for navigation bar */
+
+@media all and (max-width: 1390px) {
+  .nav-list ul li {
+    margin: 50px 35px 0px 13px;
+  }
+}
+
+@media all and (max-width: 1270px) {
+  .nav-list ul li {
+    margin: 50px 15px 0px 13px;
+  }
+}
+@media all and (max-width: 1271px) {
+  .nav-list {
+    display: none;
+  }
+}
+
+/* ! media query for responsive footer  */
+
+@media screen and (max-width: 777px) {
+  .table-content {
+    text-align: left;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .table-content > .company {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 913px) and (max-width: 1060px) {
+  .footer-container {
+    justify-content: center;
+    gap: 2rem;
+  }
+  .social-icons {
+    margin-right: 58.31px;
+  }
+  .discover-app > h2 {
+    margin-left: 20px;
+  }
+}
