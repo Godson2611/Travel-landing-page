@@ -830,12 +830,11 @@ nav ul li .btn-orange {
   font-weight: 500;
   line-height: 124.5%;
   text-align: center;
-  margin-bottom: 955.69px;
 }
 /* todo copy rights end here  */
 
 /* ! media query for responsive width in 480px  */
-@media all and (width <= 480px) {
+@media (max-width: 480px) {
   html,
   body {
     width: 100%;
@@ -863,10 +862,10 @@ nav ul li .btn-orange {
     font-size: 13.942px;
   }
   .category-container > h1 {
-    font-size: 37px;
+    font-size: 27px;
   }
   .category-container > p {
-    font-size: 25px;
+    font-size: 19px;
   }
   .category-cards-row {
     justify-content: center;
@@ -875,7 +874,7 @@ nav ul li .btn-orange {
     font-size: 25px;
   }
   .topSelling-container > h1 {
-    font-size: 37px;
+    font-size: 35px;
   }
   .row-cards {
     gap: 30px;
@@ -884,9 +883,10 @@ nav ul li .btn-orange {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: -34px;
   }
   .left-content > h1 {
-    font-size: 37px;
+    font-size: 30px;
     width: auto;
     height: auto;
   }
@@ -897,12 +897,12 @@ nav ul li .btn-orange {
     margin-top: 80px;
   }
   .texts {
-    width: 400px;
+    width: 320px;
     height: 99px;
   }
   .background-color-blur {
     right: -30.3px;
-    top: 200.6px;
+    top: 237.6px;
   }
   .big-card {
     right: -14.78px;
@@ -910,10 +910,15 @@ nav ul li .btn-orange {
   }
   .small-card {
     top: -81px;
+    left: 14px;
+    width: 294.175px;
   }
   .text-choose > p {
     width: auto;
-    font-size: 20px;
+    font-size: 16px;
+  }
+  .text-choose > h1 {
+    font-size: 35px;
   }
   .rectangle-content {
     margin: 37px;
@@ -921,13 +926,13 @@ nav ul li .btn-orange {
     height: 580px;
   }
   .rectangle-content > h2 {
-    width: 329px;
+    width: 190px;
     font-size: 21px;
     line-height: 39.827px;
     margin-left: 50.58px;
   }
   .rectangle-content > form > #email {
-    width: 342.947px;
+    width: 203.947px;
     margin-left: 30px;
   }
   .rectangle-content > .email-subscribe > label {
@@ -938,6 +943,7 @@ nav ul li .btn-orange {
     width: 198.768px;
     height: 65.49px;
     margin-top: 40px;
+    margin-left: 40px;
   }
   .footer-container {
     justify-content: center;
@@ -958,6 +964,47 @@ nav ul li .btn-orange {
   }
   .discover-app > h2 {
     margin-left: 20px;
+  }
+  .logo a {
+    font-size: 38px;
+    margin-left: -45px;
+  }
+  .texts span > h1 {
+    font-size: 20px;
+  }
+  .texts span > p {
+    font-size: 15px;
+    line-height: 138.5%;
+  }
+
+  .big-card {
+    width: 288.402px;
+  }
+
+  .big-card > img {
+    width: 230px;
+    height: auto;
+  }
+
+  .right-content {
+    margin-top: -250px;
+  }
+
+  .choose-cards > .choose-card {
+    width: 301px;
+  }
+  .choose-card > span {
+    left: 105px;
+  }
+
+  .choose-card > h1 {
+    width: 220px;
+    height: 67px;
+  }
+  .choose-card > p {
+    font-size: 18px;
+    line-height: 145%;
+    width: 205px;
   }
 }
 
