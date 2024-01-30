@@ -14,6 +14,7 @@ body {
   height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 :root {
@@ -40,6 +41,7 @@ body {
 /* ? header-container design starts here  */
 header {
   background: url(./img/background-img.png) no-repeat 50% center;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -50,14 +52,15 @@ header {
 }
 
 nav {
+  height: 100px;
+  padding: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .logo {
-  margin-top: 48px;
-  margin-left: 55px;
+  z-index: 20;
 }
 
 .logo a {
@@ -76,7 +79,7 @@ nav {
 .nav-list ul li {
   list-style: none;
   display: inline-block;
-  margin: 50px 54px 0px 13px;
+  margin-left: 20px;
 }
 
 nav ul li a {
@@ -99,13 +102,109 @@ nav ul li .btn-orange {
   font-weight: 400;
 }
 
+/* hamburger button */
+
+.hamburger {
+  margin: 0;
+  padding: 0;
+  float: left;
+  transition: opacity 0.3s;
+  display: none;
+  z-index: 20;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 50px;
+  height: 5px;
+  background: #000;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+/* mobile menu */
+.menu {
+  background: #fff;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: -400%;
+  width: 100%;
+  height: 100vh;
+  transition: 0.2s ease-in-out;
+}
+
+.menu.active {
+  top: 0;
+}
+
+.menu .menu-nav-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.menu-nav-list ul li {
+  list-style: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.menu-nav-list ul li a {
+  color: var(--1st, #212832);
+  text-align: center;
+  font-size: 22.612px;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+}
+.menu-nav-list ul div {
+  display: flex;
+  padding: 10px;
+}
+
+.menu-nav-list ul li .btn-orange {
+  border-radius: 8px;
+  border: 1px solid var(--orange);
+  background: var(--orange);
+  padding: 8px 20px;
+  color: var(--white);
+  margin: 10px;
+  font-weight: 600;
+}
+
 /* *text box  */
 
 .text-box {
-  text-align: start;
-  margin: 180px 0px 451px 41px;
-  position: relative;
-  top: 125px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-right: 35px;
+  height: 100vh;
+  width: auto;
+  top: 0;
+  left: 35px;
 }
 
 .text-box > h1 {
@@ -167,8 +266,7 @@ nav ul li .btn-orange {
 .category-cards-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
-  margin: 6rem auto;
+  margin: 10px 0;
 }
 
 .content-card {
@@ -179,6 +277,7 @@ nav ul li .btn-orange {
   align-items: center;
   width: 313.15px;
   height: 393.544px;
+  margin: 20px;
 }
 
 .content-card > h2 {
@@ -289,30 +388,39 @@ nav ul li .btn-orange {
 }
 .card-colom {
   position: relative;
-  width: 417.658px;
-  height: 607.866px;
+  width: 400px;
+  height: 500px;
+  margin: 35px;
 }
-.card-colom > .img > img {
-  position: absolute;
+
+.europe-img,
+.london-img,
+.rome-img {
+  width: 100%;
+  height: 100%;
+  white-space: none;
+  object-fit: cover;
+  border-radius: 31.923px;
 }
-.card-colom > .img > .rome-img {
-  top: -3px;
-  left: -21px;
+
+.card-colom > .img {
+  width: 100%;
+  height: 100%;
 }
-.card-colom > .img > .london-img {
-  top: -3px;
-  left: -106.5px;
+
+.card-colom > img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
-.card-colom > .img > .europe-img {
-  top: -3px;
-  left: -106px;
-}
+
 .card-contents {
   border-radius: 0px 0px 31.923px 31.923px;
   background: var(--white, #ffffff);
-  width: 418.988px;
+  width: 100%;
   height: 172.916px;
   position: absolute;
+  left: 0;
   bottom: 0px;
 }
 .card-contents > span {
@@ -321,10 +429,10 @@ nav ul li .btn-orange {
   justify-content: space-between;
 }
 .card-contents > span > p:nth-child(1) {
-  margin-left: 26.6px;
+  margin: 0 20px;
 }
 .card-contents > span > p:nth-child(2) {
-  margin-right: 37.23px;
+  margin: 20px;
 }
 .card-contents > span > p {
   color: var(--textclr, #5e6282);
@@ -352,6 +460,7 @@ nav ul li .btn-orange {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  height: 100%;
 }
 .left-content > p {
   color: var(--textclr, #5e6282);
@@ -407,10 +516,8 @@ nav ul li .btn-orange {
 /* * small card start */
 .big-card {
   position: relative;
-  top: -108.4px;
-  right: 175.22px;
   width: 443.402px;
-  height: 479.354px;
+  height: 560px;
   border-radius: 34.583px;
   background: var(--white, #fff);
   box-shadow: 0px 2.4631879329681396px 4.187419891357422px 0px rgba(0, 0, 0, 0),
@@ -496,15 +603,14 @@ nav ul li .btn-orange {
   margin-right: 29.96px;
   margin-bottom: 38px;
 }
-/* * small card end */
 
 /* * small card start */
 .small-card {
   display: flex;
-  position: relative;
-  top: -334px;
-  left: 86px;
-  align-items: flex-start;
+  position: absolute;
+  bottom: -70px;
+  right: 30px;
+  align-items: flex-end;
   justify-content: left;
   width: 315.175px;
   height: 154.592px;
@@ -846,10 +952,7 @@ nav ul li .btn-orange {
   .nav-list {
     display: none;
   }
-  .text-box {
-    margin: -91px 0px 451px 41px;
-    top: 250px;
-  }
+
   .text-box > h1 {
     font-size: 33px;
     line-height: 45.381px;
@@ -861,6 +964,7 @@ nav ul li .btn-orange {
   .text-box > button {
     font-size: 13.942px;
   }
+
   .category-container > h1 {
     font-size: 27px;
   }
@@ -883,19 +987,30 @@ nav ul li .btn-orange {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: -34px;
+    margin: 35px;
+    /* text-align: center; */
   }
+
+  .left-content > p {
+    margin: 0;
+    width: auto;
+  }
+
   .left-content > h1 {
     font-size: 30px;
     width: auto;
     height: auto;
+    margin: 0;
+    text-align: center;
   }
   .easySteps-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
+    position: relative;
     margin-top: 80px;
   }
+
   .texts {
     width: 320px;
     height: 99px;
@@ -904,15 +1019,7 @@ nav ul li .btn-orange {
     right: -30.3px;
     top: 237.6px;
   }
-  .big-card {
-    right: -14.78px;
-    left: 20.4px;
-  }
-  .small-card {
-    top: -81px;
-    left: 14px;
-    width: 294.175px;
-  }
+
   .text-choose > p {
     width: auto;
     font-size: 16px;
@@ -920,6 +1027,7 @@ nav ul li .btn-orange {
   .text-choose > h1 {
     font-size: 35px;
   }
+
   .rectangle-content {
     margin: 37px;
     width: auto;
@@ -966,8 +1074,11 @@ nav ul li .btn-orange {
     margin-left: 20px;
   }
   .logo a {
-    font-size: 38px;
-    margin-left: -45px;
+    font-size: 25px;
+  }
+
+  .hamburger .line {
+    width: 30px;
   }
   .texts span > h1 {
     font-size: 20px;
@@ -987,7 +1098,7 @@ nav ul li .btn-orange {
   }
 
   .right-content {
-    margin-top: -250px;
+    /* margin-top: -250px; */
   }
 
   .choose-cards > .choose-card {
@@ -1022,10 +1133,7 @@ nav ul li .btn-orange {
   .nav-list {
     display: none;
   }
-  .text-box {
-    margin: 111px 0px 451px 41px;
-    top: 160px;
-  }
+
   .text-box > h1 {
     line-height: 60.381px;
     font-size: 44px;
@@ -1129,6 +1237,11 @@ nav ul li .btn-orange {
     padding: 0px;
     overflow-x: hidden;
   }
+
+  .text-box h1 {
+    font-size: 45px;
+  }
+
   .rectangle-content {
     margin: 3rem;
     margin-bottom: 195.28px;
@@ -1168,20 +1281,13 @@ nav ul li .btn-orange {
 
 /* ! media query for navigation bar */
 
-@media all and (max-width: 1390px) {
-  .nav-list ul li {
-    margin: 50px 35px 0px 13px;
-  }
-}
-
-@media all and (max-width: 1270px) {
-  .nav-list ul li {
-    margin: 50px 15px 0px 13px;
-  }
-}
 @media all and (max-width: 1271px) {
   .nav-list {
     display: none;
+  }
+
+  .hamburger {
+    display: block;
   }
 }
 
